@@ -6,7 +6,6 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { shadesOfPurple } from "@clerk/themes";
 import "react-day-picker/dist/style.css";
 import { Toaster } from "sonner";
-import Image from "next/image";
 import PortfolioImage from "@/components/portfolio-image";
 
 const inter = Inter({ subsets: ["latin"] });
