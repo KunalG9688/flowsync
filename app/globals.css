@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* @keyframes moveDots {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 80px 80px;
+  }
+} */
+
+/* .animated-dotted-background {
+  background-color: #0a111f;
+  background-image: radial-gradient(#4a5568 1px, transparent 1px);
+  background-size: 30px 30px;
+  /* animation: moveDots 10s linear infinite; */
+/* }
+
+@layer utilities {
+  .gradient-title {
+    @apply font-extrabold bg-gradient-to-br from-blue-500 via-blue-100 to-blue-400 bg-clip-text tracking-tighter text-transparent pr-2 pb-2;
+  }
+} */ 
+/* Variation 10 */
+/* Orange Mountain Fire Background */
+.water-ripple-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #000; /* Background color */
+  overflow: hidden; /* To hide the ripple outside the container */
+}
+
+.water-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px; /* Initial size of the ripple */
+  height: 50px;
+  border-radius: 50%; /* Make it a circle */
+  background-color: #ff0095; /* Color of the water splash */
+  transform: translate(-50%, -50%); /* Center the ripple */
+  animation: rippleAnimation 2s ease-out forwards infinite;
+}
+
+@keyframes rippleAnimation {
+  0% {
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+  }
+  30% {
+    width: 100px;
+    height: 100px;
+    opacity: 0.6;
+  }
+  60% {
+    width: 150px;
+    height: 150px;
+    opacity: 0.3;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
+
+.animated-dotted-background {
+    background-color: #000; 
+    /* background-image: radial-gradient(
+      circle, 
+      rgba(62, 180, 137, 0.6) 20%,   
+      rgba(255, 127, 80, 0.5) 50%,   
+      rgba(255, 99, 71, 0.4) 80%,    
+      rgba(62, 180, 137, 0.3) 100% 
+    );
+    background-size: 300% 300%;
+    animation: liquidFlowAnimation 8s ease-in-out infinite; */
+  }
+  
+  @keyframes liquidFlowAnimation {
+    0% {
+      background-position: 0% 0%;
+    }
+    25% {
+      background-position: 50% 50%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    75% {
+      background-position: 50% 50%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+
+  @layer utilities {
+    .gradient-title {
+      @apply font-extrabold bg-gradient-to-br from-cyan-600 via-[#ff0095] to-indigo-700 bg-clip-text tracking-tight text-transparent pr-2 pb-2;
+    }
+  }
+  
+
+.wmde-markdown ul {
+  list-style-type: disc;
+  padding-left: 15px !important;
+  color: white;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Adjust based on your layout */
+}
+
+.logo-effect {
+  transition: transform 0.3s ease, border 0.3s ease; /* Smooth scaling and border effect */
+}
+
+.logo-effect:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  border: 2px solid #ff0095; /* Pink border on hover */
+}
+
+
+
+
+
+
+
+.sequential-animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  /* left: 30%; */
+  /* text-align: none; */
+  
+}
+
+/* Styling for sequential text spans */
+.text-sequential {
+  opacity: 0;
+  position: absolute;
+  font-size: 2rem;
+  color: #ff0095;
+  animation: revealFade 6s infinite;
+  white-space: nowrap;
+}
+
+/* Sequential delay for each text span */
+.text-sequential:nth-child(1) {
+  animation-delay: 0s;
+  right: 10%;
+}
+
+.text-sequential:nth-child(2) {
+  animation-delay: 4s;
+  right: 10%;
+}
+
+/* Keyframes for the text reveal and fade effect */
+@keyframes revealFade {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 30% {
+    opacity: 1;
+  }
+  40%, 70% {
+    opacity: 0;
+  }
+}
