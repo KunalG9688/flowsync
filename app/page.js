@@ -77,12 +77,6 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="container mx-auto py-10 text-center">
-      <div className="sequential-animation-container pb-20">
-    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold gradient-title pb-4">
-      <span className="text-sequential">Hi, I&apos;m KG Coder.</span>
-      <span className="text-sequential">I created simple design for a Jira clone.</span>
-    </h2>
-  </div>
         <p className="animate-bounce text-[#ff0095] text-[30px]">👇</p>
         <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold gradient-title pb-6 flex flex-col">
         Power Up Your Projects with FlowSync <br />
